@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: object-detection-v1742388115424 
+  description: Secure Supply Chain Example for Object Detection Application   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=object-detection-v1742388115424  
+    janus-idp.io/tekton: object-detection-v1742388115424 
+    backstage.io/kubernetes-id: object-detection-v1742388115424 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: rhdh-pai-qe/object-detection
+  tags: ["ai", "detr", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
